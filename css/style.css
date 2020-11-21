@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root{
+    --color-red: hsl(0, 100%, 74%);
+    --color-green: hsl(154, 59%, 51%);
+    --color-blue: hsl(248, 32%, 49%);
+    --color-darkBlue: hsl(249, 10%, 26%); 
+    --color-grayishBlue: hsl(246, 25%, 77%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image: url(../images/bg-intro-mobile.png);
+    background-size: cover;
+    background-color: var(--color-red);
+}
+.container{
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.component{
+    display: flex;
+    flex-direction: column;
+    margin: 100px 0 60px 0;
+}
+.component__description{
+     text-align: center;
+     color: #ffffff;
+     
+}
+.component__description .heading{
+    width: 70%;
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 auto;
+}
+.component__description .text{
+    margin: 0 auto;
+    font-weight: 400;
+    margin: 29px 0 70px 0;
+}
+.component__freeOption{
+    color: #ffffff;
+    border-radius: 10px;
+    padding-top: 27px;
+    padding-bottom: 23px;
+    margin-bottom: 24px;
+    background-color: var(--color-blue);
+    font-weight: 400;
+    font-size: 11px;
+    text-align: center;
+    position: relative;
+}
+.component__freeOption::after,.form::after{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 25px;
+    border-radius: 10px;
+    z-index: -1;
+}
+.component__freeOption span{
+    font-weight: 700;
+}
+.component__freeOption .option{
+    width: 50%;
+    margin: 0 auto;
+}.form{
+    background-color: #fff;
+    padding: 24px 24px 30px 24px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+}
+.form form input{
+    margin-bottom: 16px;
+    padding: 23px 0 21px 21px;
+    font-size: 10px;
+    color: var(--color-darkBlue);
+    font-weight: 700;
+    border-radius: 4px;
+    border: 1px solid var(--color-grayishBlue);
+}
+.form__btn{
+    position: relative;
+    padding: 24px 0 17px 0;
+    background-color: var(--color-green);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 4px;
+    border-bottom: 4px solid rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.termsInfo{
+    margin: 15px auto 0 auto;
+    font-size: 10px;
+    color: var(--color-grayishBlue);
+    text-align: center;
+    width: 75%;
+}
+.termsInfo>span{
+    color: var(--color-red);
+}
+@media screen and (min-width: 960px){
+    body{
+        background-image: url(../images/bg-intro-desktop.png);
+    }
+    main{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        max-width: 1170px;
+    }
+    .component{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 50px 0 40px 0;
+    }
+    .component__description{
+        text-align: left;
+        flex-basis: 50%;
+    }
+    .component__description .heading{
+        font-size: 29px;
+        width: 50%;
+        margin: 0;
+    }
+    .component__description .text{
+        margin: 30px 64px 0 0;
+    }
+    .component__form{
+        flex-basis: 50%;
+    }
+}
